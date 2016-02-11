@@ -6,19 +6,28 @@
   </head>
   <body>
 
-    <canvas id="bolts-canvas" width="860" height="1200"></canvas>
+    <canvas></canvas>
 
-    <script src="./lib/game.js"></script>
-    <script src="./lib/gameview.js"></script>
-    <script src="./lib/player.js"></script>
-    <script src="./lib/bolts.js"></script>
+    <script type="application/javascript" src="./vendor/keymaster.js"></script>
 
-    <script>
-      var canvasEl = document.getElementById("bolts-canvas");
-      var ctx = canvasEl.getContext("2d");
-      var game = Bolts.Game();
-      var gameview = Bolts.GameView(game, ctx);
-      gameview.start();
+    <script type="application/javascript" src="./lib/game.js"></script>
+    <script type="application/javascript" src="./lib/gameview.js"></script>
+    <script type="application/javascript" src="./lib/util.js"></script>
+    <script type="application/javascript" src="./lib/movingObject.js"></script>
+    <script type="application/javascript" src="./lib/player.js"></script>
+    <script type="application/javascript" src="./lib/bolts.js"></script>
+
+    <script type="application/javascript">
+      (function() {
+        var canvasEl = document.getElementsByTagName("canvas")[0];
+        canvasEl.width = Bolts.Game.DIM_X;
+        canvasEl.height = Bolts.Game.DIM_Y;
+
+        var ctx = canvasEl.getContext("2d");
+        var game = new Bolts.Game();
+        var gameview = new Bolts.GameView(game, ctx);
+        gameview.start();
+      })();
     </script>
 
   </body>
