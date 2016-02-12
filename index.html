@@ -25,8 +25,7 @@
 
         var ctx = canvasEl.getContext("2d");
         var game = new Bolts.Game();
-        var gameview = new Bolts.GameView(game, ctx);
-        gameview.start();
+        new Bolts.GameView(game, ctx).start();
       })();
     </script>
 
