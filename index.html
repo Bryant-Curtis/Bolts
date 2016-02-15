@@ -4,9 +4,103 @@
     <meta charset="utf-8">
     <title>Bolts</title>
   </head>
-  <body>
+    <!-- <script type="application/javascript" src="./Frog.png"></script> -->
+    <!-- <script type="application/javascript">
+      var canvas,
+          frogImg,
+          ctx,
+          imageReady = false,
+          frame = 0,
+          lastUpdateTime = 0,
+          acDelta = 0,
+          msPerFrame = 100,
+          imageData,
+          reverseCanvas;
+      window.requestAnimFrame = (function(){
+      return  window.requestAnimationFrame       ||
+              window.webkitRequestAnimationFrame ||
+              window.mozRequestAnimationFrame    ||
+              window.oRequestAnimationFrame      ||
+              window.msRequestAnimationFrame     ||
+              function( callback ){
+                window.setTimeout(callback, 1000 / 600);
+              };
+      })();
 
-    <canvas></canvas>
+      function onload() {
+        canvas = document.getElementById("bolts-canvas");
+        ctx = canvas.getContext("2d");
+        frogImg = new Image();
+        frogImg.src = "Frog.png";
+        // imageData = ctx.getImageData(0, 0, frogImg.width, frogImg.height);
+        frogImg.onload = loaded();
+        resize();
+      }
+
+      function loaded() {
+        imageReady = true;
+        prerender();
+        requestAnimFrame(update);
+        // setTimeout( update, 1000 / 50 );
+      }
+
+      function resize() {
+        canvas.width = canvas.parentNode.clientWidth;
+        canvas.height = canvas.parentNode.clientHeight;
+        redraw();
+      }
+
+      function redraw() {
+        ctx.fillStyle = '#000000';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        if (imageReady) {
+          ctx.save();
+          ctx.drawImage(frogImg, frame*20.51, 58, 21, 27,
+                        (canvas.width/2), (canvas.height/2), 31.5, 40.5);
+          ctx.restore();
+        }
+      }
+
+      function update() {
+        requestAnimFrame(update);
+
+        var delta = Date.now() - lastUpdateTime;
+        if (acDelta > msPerFrame) {
+          acDelta = 0;
+          redraw();
+          frame++;
+          if (frame >= 6) { frame = 0 };
+        } else {
+          acDelta += delta;
+        }
+
+        lastUpdateTime = Date.now();
+      }
+
+      function prerender() {
+        reverseCanvas = document.createElement('canvas');
+        reverseCanvas.width = canvas.width;
+        reverseCanvas.height = canvas.height;
+        var rctx = reverseCanvas.getContext("2d");
+        rctx.save();
+        // rctx.translate(frogImg.width, 0);
+        // rctx.scale(-1, 1);
+        rctx.drawImage(reverseCanvas, 0, 0);
+        // modify the colors
+        var imageData = rctx.getImageData(0, 0, reverseCanvas.width, reverseCanvas.height);
+        for (var i=0, il = imageData.data.length; i < il; i+=4) {
+          if (imageData.data[i] != 0) imageData.data[i] = imageData.data[i] + 200;    // red
+          if (imageData.data[i+1] != 0) imageData.data[i+1] = imageData.data[i+1] - 150; // green
+          if (imageData.data[i+1] != 0) imageData.data[i+2] = imageData.data[i+2] - 150; // blue
+        }
+        rctx.putImageData(imageData, 0, 0);
+        rctx.restore();
+      }
+
+    </script> -->
+  <body onresize="onresize()" onload="onload()" style="position: absolute; padding: 0; margin: 0; height: 100%; width: 100%;">
+
+    <canvas id="bolts-canvas" class="canvas"></canvas>
 
     <script type="application/javascript" src="./vendor/keymaster.js"></script>
 
@@ -19,15 +113,58 @@
 
     <script type="application/javascript">
       (function() {
-        var canvasEl = document.getElementsByTagName("canvas")[0];
-        canvasEl.width = Bolts.Game.DIM_X;
-        canvasEl.height = Bolts.Game.DIM_Y;
+        var canvas = document.getElementById("bolts-canvas");
+        canvas.width = Bolts.Game.DIM_X;
+        canvas.height = Bolts.Game.DIM_Y;
+        var ctx = canvas.getContext("2d");
 
-        var ctx = canvasEl.getContext("2d");
         var game = new Bolts.Game();
         new Bolts.GameView(game, ctx).start();
       })();
     </script>
+    <div class="points">{Bolts.Game.points}
+
+    </div>
+    <!-- <script>
+    <!doctype html>
+<html>
+<script type='text/javascript'>
+  var canvas = null;
+  var frogImg = null;
+  var ctx = null;
+  var imageReady = false;
+  function onload() {
+    canvas = document.getElementById('gameCanvas');
+    ctx = canvas.getContext("2d");
+    img = new Image();
+    img.src = 'http://buildnewgames.com/assets/article/sprite-animation/simba.png';
+    img.onload = loaded();
+    resize();
+  }
+  function loaded() {
+    imageReady = true;
+    redraw();
+  }
+  function resize() {
+    canvas.width = canvas.parentNode.clientWidth;
+    canvas.height = canvas.parentNode.clientHeight;
+    redraw();
+  }
+  function redraw() {
+    ctx.fillStyle = '#000000';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    if (imageReady)
+        ctx.drawImage(img, canvas.width/2 - (img.width/2),
+                           canvas.height/2 - (img.height/2));
+  }
+</script>
+<body onresize='onresize()' onload='onload()' style='position: absolute; padding:0; margin:0; height: 100%; width:100%'>
+
+<canvas id="gameCanvas"></canvas>
+
+</body>
+</html>
+    </script> -->
 
   </body>
 </html>
