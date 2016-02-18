@@ -2,16 +2,16 @@
 
 <i>Fun</i> <strong>Short Easy Game</strong>: <a href=https://bryant-curtis.github.io/Bolts/>Click Here</a>
 
-<h2>Story</h2>
-
-
+<!-- <h2>Story</h2> -->
 
 <h2>Description</h2>
 
-This is a browser game. The user can move left or right to dodge Bolts of lightning falling from the sky.
-There is a story behind the deadly scene. For those interested please see the Story section below.
-It is hosted online and can be played anytime as a pass-time or even for competitions with
-friends. The player with the highest score or highest number of bolts survived is the winner.
+This is a dodge-or-die browser game. The user can move left or right to dodge Bolts of lightning falling
+at various incrementing speeds from the sky.
+<!-- There is a story behind the deadly scene. For those interested please see the Story section below. -->
+It is hosted online and can be played anytime as a pass-time or even used for competitions with
+friends. The player with the highest score or highest number of bolts survived is the winner. Counting by
+number of Bolts is more difficult in my opinion.
 
 <h2>GamePlay</h2>
 
@@ -22,6 +22,6 @@ You have a score that will increment for as long as your life count is greater t
 Use the "LEFT" and "RIGHT" arrow keys on the keyboard to move your player to dodge the falling bolts.</br>
 After you have been struck 3 times, you will <strong>EXPLODE</strong> so... beware!</br>
 
-Catch: The movement of the player is very fluid, so beware! The reason for this comes from the details
-in the Story, if you choose to read it.
-
+Catch: The movement of the player is very fluid, so beware! He is made of water and hence slides rather than walks.
+But if you can control him right he can prove to be useful to you.
+<!-- The reason for this comes from the details in the Story, if you choose to read it. -->
