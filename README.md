@@ -17,11 +17,11 @@ number of Bolts is more difficult in my opinion.
 
 <strong>You are the blue player</strong> in the middle of the screen on the ground(at the bottom of the screen).</br>
 Yellow Bolts of lightning will <strong>fall down</strong> on you at various and <strong>incrementing speeds</strong> from the sky (top of the screen).</br>
-You have 3 lives that will deteriorate by 1 each time a bolt strikes you.</br>
-You have a score that will increment for as long as your life count is greater than 0.</br>
-Use the "LEFT" and "RIGHT" arrow keys on the keyboard to move your player to dodge the falling bolts.</br>
-After you have been struck 3 times, you will <strong>EXPLODE</strong> so... beware!</br>
+You have <strong>3 lives</strong> that will deteriorate by 1 each time a bolt strikes you.</br>
+<strong>You have a score</strong> that will increment for as long as your life count is greater than 0.</br>
+Use the <strong>"LEFT"</strong> and <strong>"RIGHT" arrow keys</strong> on the keyboard to move your player to dodge the falling bolts.</br>
+After you have been <strong>struck 3 times</strong>, you will <strong>EXPLODE</strong> so... beware!</br>
 
-Catch: The movement of the player is very fluid, so beware! He is made of water and hence slides rather than walks.
+<strong>Note:</strong> The movement of the player is very fluid, so beware! He is made of water and hence slides rather than walks.
 But if you can control him right he can prove to be useful to you.
 <!-- The reason for this comes from the details in the Story, if you choose to read it. -->
