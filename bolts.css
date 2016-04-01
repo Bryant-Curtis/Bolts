@@ -1,0 +1,51 @@
+/* RESET */
+
+html, body, section, ul, li {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-style: normal;
+  background: transparent;
+}
+
+li {
+  list-style: none;
+}
+
+.group:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+/* MAIN CONTENT */
+
+.main {
+  margin: auto;
+  padding: 20px 0 0 0;
+  max-width: 1000px;
+}
+
+.canvas {
+}
+
+.links {
+  margin: auto;
+  padding: 20px 0 0 50px;
+  max-width: 500px;
+}
+
+.links > ul {
+  margin: auto;
+  max-width: 400px;
+}
+
+.sub-link {
+  float: left;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.sub-link > a > i {
+  font-size: 50px;
+}
