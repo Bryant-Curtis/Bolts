@@ -100,16 +100,24 @@
     </script> -->
   <!-- <body onresize="onresize()" onload="onload()" style="position: absolute; padding: 0; margin: 0; height: 100%; width: 100%;"> -->
 <body>
+
+    <!-- This is the actual screen or box that the canvas is drawn in -->
+
     <canvas id="bolts-canvas" class="canvas"></canvas>
+
+    <!-- These are the differnt files I am loading to the screen to be used for the game -->
 
     <script type="application/javascript" src="./vendor/keymaster.js"></script>
 
+    <script type="application/javascript" src="./lib/startScreen.js"></script>
     <script type="application/javascript" src="./lib/game.js"></script>
     <script type="application/javascript" src="./lib/gameview.js"></script>
     <script type="application/javascript" src="./lib/util.js"></script>
     <script type="application/javascript" src="./lib/movingObject.js"></script>
     <script type="application/javascript" src="./lib/player.js"></script>
     <script type="application/javascript" src="./lib/bolts.js"></script>
+
+    <!-- This is where  -->
 
     <script type="application/javascript">
       (function() {
@@ -118,8 +126,10 @@
         canvas.height = Bolts.Game.DIM_Y;
         var ctx = canvas.getContext("2d");
 
-        var game = new Bolts.Game();
-        new Bolts.GameView(game, ctx).start();
+        var startScreen = new Bolts.StartScreen(ctx).start;
+
+        // var game = new Bolts.Game();
+        // new Bolts.GameView(game, ctx).start();
       })();
     </script>
     <!-- <script>
