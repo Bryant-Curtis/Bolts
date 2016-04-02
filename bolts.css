@@ -1,10 +1,17 @@
+
+
 /* RESET */
 
-html, body, section, ul, li {
+
+html, body, section, ul, li,
+p, a, i, span {
   margin: 0;
   border: 0;
   padding: 0;
+  font: inherit;
+  color: inherit;
   font-style: normal;
+  text-decoration: none;
   background: transparent;
 }
 
@@ -12,13 +19,19 @@ li {
   list-style: none;
 }
 
+
+/* CLEAR FIX */
+
+
 .group:after {
   display: block;
   content: "";
   clear: both;
 }
 
+
 /* MAIN CONTENT */
+
 
 .main {
   margin: auto;
@@ -26,8 +39,76 @@ li {
   max-width: 1000px;
 }
 
-.canvas {
+
+/* WELCOME SCREEN */
+
+
+.start-screen {
+  max-width: 1000px;
+  height: 550px;
+  background: #000000;
+  font-family: monospace;
 }
+
+.title {
+  padding: 100px 0 0 0;
+  font-size: 70px;
+  color: #FFFF00;
+  text-align: center;
+}
+
+.instructions {
+  margin: auto;
+  padding: 50px 0 70px 0;
+  width: 700px;
+  font-size: 20px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.instructions span {
+  color: #0f8917;
+}
+
+.arrows {
+  text-decoration: underline;
+}
+
+.start-button {
+  margin: auto;
+  border-radius: 12px;
+  width: 100px;
+  background: #0f7e42;
+}
+
+.start-button > a > p {
+  text-align: center;
+  padding: 10px 20px;
+  color: #FFFF00;
+  font-size: 16px;
+}
+
+.button-message {
+  margin: auto;
+  text-align: center;
+  padding: 10px 0 0 0;
+  color: #FFFFFF;
+}
+
+
+/* THE GAME SCREEN */
+
+
+.hide {
+  display: none;
+}
+
+.show {
+}
+
+
+/* LINKS BELOW GAME SCREEN */
+
 
 .links {
   margin: auto;
@@ -38,6 +119,7 @@ li {
 .links > ul {
   margin: auto;
   max-width: 400px;
+  color: #0E52A5;
 }
 
 .sub-link {

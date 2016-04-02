@@ -107,12 +107,44 @@
 
       <!-- This is the actual screen or box that the canvas is drawn in -->
 
-      <canvas id="bolts-canvas" class="canvas"></canvas>
+      <canvas id="bolts-canvas" class="hide"></canvas>
+
+      <section class="start-screen">
+        <section class="title">
+          <p>
+            <i class="fa fa-bolt"></i>
+            BOLTS
+            <i class="fa fa-bolt"></i>
+          </p>
+        </section>
+
+        <section class="instructions">
+          <p>
+            Use the <span class="arrows">(<~)left</span> and <span class="arrows">right(~>)</span> arrow keys to <span>dodge the falling bolts.</span>
+            Winner can be chosen by either highest score or most bolts dodged.
+            Happy Dodging!
+          </p>
+        </section>
+
+        <section class="start-button">
+          <a href="http://www.bryantcurtis.com" >
+            <p>Begin!</p>
+          </a>
+        </section>
+
+        <section class="button-message">
+          <p>
+            Click on the button or
+            <br/>
+            hit the space bar to begin
+          </p>
+
+        </section>
+      </section>
 
       <!-- These are the different files I am loading to the screen to be used for the game -->
 
       <script type="application/javascript" src="./vendor/keymaster.js"></script>
-
       <script type="application/javascript" src="./lib/startScreen.js"></script>
       <script type="application/javascript" src="./lib/game.js"></script>
       <script type="application/javascript" src="./lib/gameview.js"></script>
