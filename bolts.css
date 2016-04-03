@@ -8,6 +8,7 @@ p, a, i, span {
   margin: 0;
   border: 0;
   padding: 0;
+  box-sizing: border-box;
   font: inherit;
   color: inherit;
   font-style: normal;
@@ -48,6 +49,7 @@ li {
   height: 550px;
   background: #000000;
   font-family: monospace;
+  border: 5px solid #aaaaaa;
 }
 
 .title {
@@ -102,6 +104,9 @@ li {
 
 /* THE GAME SCREEN */
 
+#id {
+  border: 5px solid #aaaaaa;
+}
 
 .hide {
   display: none;
