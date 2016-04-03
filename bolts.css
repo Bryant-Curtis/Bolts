@@ -100,6 +100,11 @@ li {
   color: #FFFFFF;
 }
 
+.button-message span {
+  color: #FFFF00;
+  font-size: 14px;
+}
+
 
 /* THE GAME SCREEN */
 
@@ -137,10 +142,23 @@ li {
 .score {
   margin: auto;
   padding: 50px 0 70px 0;
-  width: 700px;
-  font-size: 20px;
+  /*width: 700px;*/
+  font-size: 24px;
   color: #FFFFFF;
   text-align: center;
+}
+
+.score > p > span {
+  text-decoration: underline;
+  color: orange;
+  /*color: #0f8917;*/
+  /*color: #FFFF00;*/
+  font-size: 36px;
+}
+
+.score > p > i {
+  color: orange;
+  font-size: 28px;
 }
 
 .end-buttons {
@@ -170,6 +188,7 @@ li {
   width: 600px;
   padding: 10px 0 0 0;
   color: #FFFFFF;
+  font-size: 13px;
 }
 
 .end-screen-button-messages > p {
@@ -177,12 +196,17 @@ li {
   text-align: center;
 }
 
+.end-screen-button-messages > p > span {
+  color: #FFFF00;
+  font-size: 14px;
+}
+
 .play-again-message {
-  margin: 0 0 0 71px;
+  margin: 0 0 0 67px;
 }
 
 .return-to-welcome-screen-message {
-  margin: 0 0 0 70px;
+  margin: 0 0 0 60px;
 }
 
 

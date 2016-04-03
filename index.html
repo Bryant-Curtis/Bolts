@@ -106,7 +106,6 @@
     <!-- FILES LOADED TO MAKE GAME FUNCTION -->
 
     <script type="application/javascript" src="./vendor/keymaster.js"></script>
-    <script type="application/javascript" src="./lib/startScreen.js"></script>
     <script type="application/javascript" src="./lib/game.js"></script>
     <script type="application/javascript" src="./lib/gameview.js"></script>
     <script type="application/javascript" src="./lib/util.js"></script>
@@ -120,7 +119,7 @@
 
       <!-- WELCOME SCREEN -->
 
-      <section class="start-screen">
+      <section id="start-screen" class="start-screen">
         <section class="title">
           <p>
             <i class="fa fa-bolt"></i>
@@ -145,9 +144,9 @@
 
         <section class="button-message">
           <p>
-            Click on the button or
+            <span>Click</span> on the button or
             <br/>
-            hit the space bar to begin
+            hit the <span>space bar</span> to begin
           </p>
 
         </section>
@@ -159,7 +158,7 @@
 
       <!-- END GAME SCREEN -->
 
-      <section class="hide">
+      <section id="end-screen" class="hide">
         <!--
             "You got a score of ___" message event.target.innerHTML = this.score (?)
           -->
@@ -167,7 +166,7 @@
           <p>Great Job!</p>
         </section>
 
-        <section class="score">
+        <section id="score" class="score">
           <p>You got a score of ___!</p>
         </section>
 
@@ -178,15 +177,15 @@
 
         <section class="end-screen-button-messages group">
           <p class="play-again-message">
-            Click on the button or hit
+            <span>Click</span> on the button or hit
             <br/>
-            the space bar to play again
+            the <span>space bar</span> to play again
           </p>
 
           <p class="return-to-welcome-screen-message">
-            Click on the button
+            <span>Click</span> on the button
             <br/>
-            or hit w to return
+            or hit <span>Enter</span> to return
           </p>
         </section>
 
