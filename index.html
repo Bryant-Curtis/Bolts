@@ -142,14 +142,14 @@
           </a>
         </section>
 
-        <section class="button-message">
+        <!-- <section class="button-message">
           <p>
             <span>Click</span> on the button or
             <br/>
             hit the <span>space bar</span> to begin
           </p>
+        </section> -->
 
-        </section>
       </section>
 
       <!-- GAME SCREEN -->
@@ -175,9 +175,10 @@
           <a id="return-to-welcome-screen">Welcome Screen</a>
         </section>
 
-        <section class="end-screen-button-messages group">
+        <!-- <section class="end-screen-button-messages group">
           <p class="play-again-message">
-            <span>Click</span> on the button or hit
+            <span>Click</span> on the button
+            or hit
             <br/>
             the <span>space bar</span> to play again
           </p>
@@ -187,7 +188,7 @@
             <br/>
             or hit <span>Enter</span> to return
           </p>
-        </section>
+        </section> -->
 
       </section>
 
@@ -212,14 +213,32 @@
             new Bolts.GameView(game, ctx).start();
           });
 
-          document.addEventListener("keyup", function(event) {
-            if (event.keyCode === 32) {
-              startScreen.className = "hide";
-              gameScreen.className = "show";
+          startButton.removeEventListener("click", function(event) {
 
-              new Bolts.GameView(game, ctx).start();
-            }
+            startScreen.className = "hide";
+            gameScreen.className = "show";
+
+            new Bolts.GameView(game, ctx).start();
           });
+
+          // document.addEventListener("keyup", function(event) {
+          //   if (event.keyCode === 32) {
+          //     startScreen.className = "hide";
+          //     gameScreen.className = "show";
+          //
+          //     new Bolts.GameView(game, ctx).start();
+          //   }
+          // });
+          //
+          // document.removeEventListener("keyup", function(event) {
+          //   if (event.keyCode === 32) {
+          //     startScreen.className = "hide";
+          //     gameScreen.className = "show";
+          //
+          //     new Bolts.GameView(game, ctx).start();
+          //   }
+          // });
+
         })();
       </script>
 

@@ -78,19 +78,19 @@ li {
 .start-button {
   margin: auto;
   border-radius: 12px;
-  width: 100px;
+  max-width: 150px;
   background: #0f7e42;
 }
 
-.start-button > a:hover {
+.start-button > a {
   cursor: pointer;
 }
 
 .start-button > a > p {
+  padding: 15px;
   text-align: center;
-  padding: 10px 20px;
   color: #FFFF00;
-  font-size: 16px;
+  font-size: 22px;
 }
 
 .button-message {
