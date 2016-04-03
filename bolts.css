@@ -81,6 +81,10 @@ li {
   background: #0f7e42;
 }
 
+.start-button > a:hover {
+  cursor: pointer;
+}
+
 .start-button > a > p {
   text-align: center;
   padding: 10px 20px;
