@@ -103,6 +103,7 @@ li {
 
 /* THE GAME SCREEN */
 
+
 #id {
   border: 5px solid #aaaaaa;
 }
@@ -112,6 +113,76 @@ li {
 }
 
 .show {
+}
+
+
+/* END SCREEN */
+
+
+.end-screen {
+  max-width: 1000px;
+  height: 550px;
+  background: #000000;
+  font-family: monospace;
+  border: 5px solid #aaaaaa;
+}
+
+.end-message {
+  padding: 100px 0 0 0;
+  font-size: 70px;
+  color: #FFFF00;
+  text-align: center;
+}
+
+.score {
+  margin: auto;
+  padding: 50px 0 70px 0;
+  width: 700px;
+  font-size: 20px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.end-buttons {
+  margin: auto;
+  padding: 30px 0 0 0;
+  width: 500px;
+}
+
+.end-buttons > a {
+  float: left;
+  margin: 0 55px;
+  border-radius: 12px;
+  padding: 10px 20px;
+  width: 100px;
+  color: #FFFF00;
+  font-size: 16px;
+  text-align: center;
+  background: #0f7e42;
+}
+
+.end-buttons > a:hover {
+  cursor: pointer;
+}
+
+.end-screen-button-messages {
+  margin: auto;
+  width: 600px;
+  padding: 10px 0 0 0;
+  color: #FFFFFF;
+}
+
+.end-screen-button-messages > p {
+  float: left;
+  text-align: center;
+}
+
+.play-again-message {
+  margin: 0 0 0 71px;
+}
+
+.return-to-welcome-screen-message {
+  margin: 0 0 0 70px;
 }
 
 

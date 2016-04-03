@@ -103,11 +103,22 @@
   <!-- <body onresize="onresize()" onload="onload()" style="position: absolute; padding: 0; margin: 0; height: 100%; width: 100%;"> -->
   <body>
 
+    <!-- FILES LOADED TO MAKE GAME FUNCTION -->
+
+    <script type="application/javascript" src="./vendor/keymaster.js"></script>
+    <script type="application/javascript" src="./lib/startScreen.js"></script>
+    <script type="application/javascript" src="./lib/game.js"></script>
+    <script type="application/javascript" src="./lib/gameview.js"></script>
+    <script type="application/javascript" src="./lib/util.js"></script>
+    <script type="application/javascript" src="./lib/movingObject.js"></script>
+    <script type="application/javascript" src="./lib/player.js"></script>
+    <script type="application/javascript" src="./lib/bolts.js"></script>
+
+    <!-- MAIN SECTION -->
+
     <section class="main">
 
-      <!-- This is the actual screen or box that the canvas is drawn in -->
-
-      <canvas id="bolts-canvas" class="hide" style="border: 5px solid #aaaaaa;"></canvas>
+      <!-- WELCOME SCREEN -->
 
       <section class="start-screen">
         <section class="title">
@@ -142,18 +153,46 @@
         </section>
       </section>
 
-      <!-- These are the different files I am loading to the screen to be used for the game -->
+      <!-- GAME SCREEN -->
 
-      <script type="application/javascript" src="./vendor/keymaster.js"></script>
-      <script type="application/javascript" src="./lib/startScreen.js"></script>
-      <script type="application/javascript" src="./lib/game.js"></script>
-      <script type="application/javascript" src="./lib/gameview.js"></script>
-      <script type="application/javascript" src="./lib/util.js"></script>
-      <script type="application/javascript" src="./lib/movingObject.js"></script>
-      <script type="application/javascript" src="./lib/player.js"></script>
-      <script type="application/javascript" src="./lib/bolts.js"></script>
+      <canvas id="bolts-canvas" class="hide" style="border: 5px solid #aaaaaa;"></canvas>
 
-      <!-- This is where the game begins -->
+      <!-- END GAME SCREEN -->
+
+      <section class="hide">
+        <!--
+            "You got a score of ___" message event.target.innerHTML = this.score (?)
+          -->
+        <section class="end-message">
+          <p>Great Job!</p>
+        </section>
+
+        <section class="score">
+          <p>You got a score of ___!</p>
+        </section>
+
+        <section class="end-buttons group">
+          <a id="play-again">Play Again!</a>
+          <a id="return-to-welcome-screen">Welcome Screen</a>
+        </section>
+
+        <section class="end-screen-button-messages group">
+          <p class="play-again-message">
+            Click on the button or hit
+            <br/>
+            the space bar to play again
+          </p>
+
+          <p class="return-to-welcome-screen-message">
+            Click on the button
+            <br/>
+            or hit w to return
+          </p>
+        </section>
+
+      </section>
+
+      <!-- START THE GAME -->
 
       <script type="application/javascript">
         (function() {
@@ -185,8 +224,9 @@
         })();
       </script>
 
-      <section class="links">
+      <!-- LINKS BELOW SCREEN -->
 
+      <section class="links">
         <ul class="group">
 
           <li class="sub-link">
@@ -218,8 +258,8 @@
           </li>
 
         </ul>
-
       </section>
+
     </section>
   </body>
 </html>
